@@ -16,7 +16,7 @@ exports.connectDB = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const uri = "mongodb+srv://aksinghak471947:Atul123456@cluster0.c40en.mongodb.net/fodiee?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI || "mongodb+srv://aksinghak471947:Atul123456@cluster0.c40en.mongodb.net/fodiee?retryWrites=true&w=majority";
 console.log(uri);
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

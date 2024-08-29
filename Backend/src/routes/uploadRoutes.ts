@@ -3,6 +3,5 @@ import { uploadImage } from '../controllers/imageUploadController';
 
 const router = Router();
 
-router.post('/upload', uploadImage); // Route for handling file uploads
-
+router.post('/upload', uploadImage); 
 export default router;

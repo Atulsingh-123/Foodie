@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { getSocketServerInstance } from '../App';
-import { Order } from '../models/Order'; // Assuming you have an Order model
+import { OrderModel } from '../models/orderModel'
 
 export const confirmOrder = async (req: Request, res: Response) => {
   const { tableNumber, items, total } = req.body;
@@ -18,7 +18,7 @@ export const confirmOrder = async (req: Request, res: Response) => {
 
   try {
     // Store the order in the database
-    const newOrder = new Order(orderConfirmation);
+    const newOrder = new OrderModel(orderConfirmation);
     await newOrder.save();
 
     // Emit the order to all connected clients

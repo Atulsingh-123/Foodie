@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const uri ='mongodb://localhost:27017/dbconnect';
+const uri = "mongodb+srv://aksinghak471947:Atul123456@cluster0.c40en.mongodb.net/fodiee?retryWrites=true&w=majority"
+console.log(uri);
 
 export const connectDB = async () => {
   try {
@@ -11,6 +12,6 @@ export const connectDB = async () => {
     console.log('MongoDB connected successfully with Mongoose');
   } catch (error: any) {
     console.error('MongoDB connection error:', error.message);
-    process.exit(1); // Exit process with failure
+    process.exit(1); 
   }
 };

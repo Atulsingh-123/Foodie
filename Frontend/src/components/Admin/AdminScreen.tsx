@@ -11,7 +11,7 @@ interface OrderDetails {
   tableNumber: number;
   items: OrderItem[];
   total: number;
-  timestamp: string; // Add timestamp property
+  timestamp: string;
 }
 
 const AdminScreen: React.FC = () => {
@@ -39,7 +39,7 @@ const AdminScreen: React.FC = () => {
     if (typeof timestamp === 'string') {
       date = new Date(timestamp);
     } else if (typeof timestamp === 'number') {
-      date = new Date(timestamp); // Ensure this is in milliseconds, not seconds
+      date = new Date(timestamp); 
     } else {
       return 'Invalid Date';
     }
